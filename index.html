@@ -35,6 +35,19 @@ li a:hover {
     background-color: #111;
 }
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+<script>
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+</script>
+
 <!--
 
 	
@@ -63,10 +76,10 @@ li a:hover {
 </div>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#crew">Crew</a></li>
-  <li><a href="#developers">Developers</a></li>
+  <li><a href="#home" onclick="smooth-scroll()">Home</a></li>
+  <li><a href="#news" onclick="smooth-scroll()">News</a></li>
+  <li><a href="#crew" onclick="smooth-scroll()">Crew</a></li>
+  <li><a href="#developers" onclick="smooth-scroll()">Developers</a></li>
 </ul>
 
 <div id="news"
